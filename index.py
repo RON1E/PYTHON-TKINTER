@@ -5,6 +5,13 @@ root = Tk()
 root.title("Bem Vindo Ao GeekForGeeks! ")
 root.geometry('350x200')
 
+menu = Menu(root)
+item = Menu(menu)
+item.add_command(label='Novo')
+menu.add_cascade(label='Arquivo', menu=item)
+root.config(menu=menu)
+
+
 lbl = Label(root, text="Você é  Geek ? ")
 lbl.grid()
 
